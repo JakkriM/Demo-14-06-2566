@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="stylesheet" href="main.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&family=Rubik:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="card">
+      <div class="number">
+        <ul>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+        </ul>
+      </div>
+      <div class="nav">
+        <div>
+          <b>calc</b>
+        </div>
+        <div class="theme">
+          THEME
+          <div id="switch" onclick="switchTheme()">
+            <span class="slider" id="slider"></span>
+          </div>
+        </div>
+      </div>
+      <div class="display">
+        <input type="text" id="display" name="display" />
+      </div>
+      <div class="row">
+        <div class="box">
+          <input type="button" value="7" onclick="getnumber(value)" />
+          <input type="button" value="8" onclick="getnumber(value)" />
+          <input type="button" value="9" onclick="getnumber(value)" />
+          <input
+            class="btnblue"
+            type="button"
+            value="DEL"
+            onclick="Btndel(display.value)"
+          />
+        </div>
+        <div class="box">
+          <input type="button" value="4" onclick="getnumber(value)" />
+          <input type="button" value="5" onclick="getnumber(value)" />
+          <input type="button" value="6" onclick="getnumber(value)" />
+          <input type="button" value="+" onclick="calculate(value)" />
+        </div>
+        <div class="box">
+          <input type="button" value="1" onclick="getnumber(value)" />
+          <input type="button" value="2" onclick="getnumber(value)" />
+          <input type="button" value="3" onclick="getnumber(value)" />
+          <input type="button" value="-" onclick="calculate(value)" />
+        </div>
+        <div class="box">
+          <input type="button" value="." onclick="decimal()" />
+          <input type="button" value="0" onclick="getnumber(value)" />
+          <input type="button" value="/" onclick="calculate(value)" />
+          <input type="button" value="x" onclick="calculate('*')" />
+        </div>
+        <div class="box">
+          <input
+            class="btnblue"
+            type="button"
+            value="RESET"
+            onclick="BtnReset()"
+          />
+          <input class="btnred" type="button" value="=" onclick="equal()" />
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+
+    <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+  </body>
+</html>

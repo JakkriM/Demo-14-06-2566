@@ -1,0 +1,199 @@
+html {
+  font-family: "Rubik", sans-serif;
+}
+
+:root,
+:root.theme1 {
+  --bg-color: #3b4664;
+  --switch: #d03f30;
+  --b-color: #657297;
+  --r-color: #d03f30;
+  --sdb-color : #303f5a;
+  --sdr-color : #592e34;
+  --row-color: #252d43;
+  --display-color : #191f32;
+  --display-font-color: #fbfcff;
+  --switch-color: #252d42 ;
+  --sd-input-color: #3c3e47;
+  --input-color: #e9e3dc;
+  --font-input: #4c4d55;
+  --font-r-color : #efefef;
+  --font-nav : #fbfcff;
+  --number-color: #fbfcff;
+}
+:root.theme2 {
+  --bg-color: #e6e6e6;
+  --switch: #c85400;
+  --b-color: #398187;
+  --r-color: #c85401;
+  --sdb-color : #276a71;
+  --sdr-color : #9b4404;
+  --row-color: #d4cdcd;
+  --display-color : #efefef;
+  --display-font-color: #383934;
+  --switch-color: #d4cdcd;
+  --sd-input-color: #a4a197;
+  --input-color: #e6e4e0;
+  --font-input: #3d3c38;
+  --font-r-color : #efefef;
+  --font-nav : #383934;
+  --number-color: #383934;
+}
+:root.theme3 {
+  --bg-color: #170629;
+  --switch: #01e1cf;
+  --b-color: #55087c;
+  --r-color: #01dfd1;
+  --sdb-color : #9f23cd;
+  --sdr-color : #68ebeb;
+  --row-color: #1c0937;
+  --display-color : #1d0836;
+  --display-font-color: #f1dd58;
+  --switch-color: #1d0836;
+  --sd-input-color: #511a69;
+  --input-color: #331b4d;
+  --font-input: #f2d150;
+  --font-r-color : #3d3c38;
+  --font-nav : #f1dd58;
+  --number-color: #f1dd58;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-color);
+}
+
+.card {
+  padding: 10px;
+}
+
+.nav {
+  color: white;
+  font-size: 20px;
+  font-family: "League Spartan", sans-serif;
+}
+
+.card input {
+  border: 0;
+  outline: 0;
+  width: 60px;
+  height: 35px;
+  border-radius: 7px;
+  box-shadow: 0px 3px 0px var(--sd-input-color);
+  background: var(--input-color);
+  margin: 10px;
+}
+
+.display {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px 0px;
+}
+
+.display input {
+  text-align: right;
+  flex: 1;
+  font-size: 45px;
+  box-shadow: none;
+  background: var(--display-color);
+  border-radius: 7px;
+  color: var(--display-font-color);
+  margin: 0;
+  padding: 20px 15px;
+  font-weight: bold;
+}
+
+.row {
+  background: var(--row-color);
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.box {
+  display: flex;
+}
+
+.box input {
+  font-size: 20px;
+  align-items: center;
+  color: var(--font-input);
+  flex-grow: 1;
+  font-family: "Rubik", sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btnblue {
+  background: var(--b-color) !important;
+  color: #ffffff !important;
+
+  box-shadow: 0px 3px 0px var(--sdb-color) !important;
+}
+
+.btnred {
+  background: var(--r-color) !important;
+  color: var(--font-r-color)  !important;
+
+  box-shadow: 0px 3px 0px var(--sdr-color) !important;
+}
+
+.card input.equal {
+  width: 145px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--font-nav);
+}
+
+.theme {
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+}
+
+#switch {
+  border-radius: 30px;
+  background: var(--switch-color);
+  width: 60px;
+  height: 20px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.slider {
+  border-radius: 50%;
+  height: 12px;
+  width: 12px;
+  position: absolute;
+  margin: 4px 5px;
+  background: var(--switch);
+}
+
+.number{
+    display: flex;
+    justify-content: end;
+    margin-bottom: -12px;
+}
+.number ul li{
+    display: inline;
+    margin: 0px 6px;
+    font-size: 10px;
+    color : var(--number-color);
+}
+
