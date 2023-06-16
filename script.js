@@ -1,9 +1,13 @@
+let number;
+let x;
+let mark;
 function getnumber(value) {
   let chackcount = document.getElementById("display").value;
   chackcount = parseFloat(chackcount.replaceAll(",", ""));
   if (chackcount.toString().length < 10) {
     let num = (document.getElementById("display").value += value);
     num = parseFloat(num.replaceAll(",", ""));
+    number = num;
     document.getElementById("display").value = displayprocess(num);
   }
 }
@@ -15,6 +19,8 @@ function displayprocess(num) {
 
 function BtnReset() {
   document.getElementById("display").value = "";
+  number = 0;
+  x = 0;
 }
 
 function Btndel(value) {
@@ -27,22 +33,17 @@ function Btndel(value) {
   document.getElementById("display").value = displayprocess(num);
 }
 
-let x;
+
 function calculate(value) {
-  let num = document.getElementById("display").value;
-  num = parseFloat(num.replaceAll(",", ""));
-  num += value;
-  x = num;
+  mark = value;
+  x = number;
   document.getElementById("display").value = "";
 }
 
 function equal() {
-  console.log(x);
-  let num = document.getElementById("display").value;
-  num = parseFloat(num.replaceAll(",", ""));
-  console.log(x, " and ", num);
-  x += num;
-  document.getElementById("display").value = displayprocess(eval(x));
+  x = x + mark + number;
+  x = eval(x);
+  document.getElementById("display").value = displayprocess(x);
 }
 
 function decimal() {
@@ -52,11 +53,10 @@ function decimal() {
 
 let btnTheme = document.getElementById("switch");
 let slider = document.querySelector("#slider");
-let body = document.querySelector("body");
 
 let ThemeNum = 1;
 function switchTheme() {
-  if (ThemeNum + 1 > 3) {
+  if (ThemeNum == 3) {
     ThemeNum = 1;
   } else {
     ThemeNum += 1;
